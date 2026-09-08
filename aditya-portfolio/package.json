@@ -1,0 +1,35 @@
+{
+  "name": "aditya-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "setup:backend": "python -m venv backend\\.venv && backend\\.venv\\Scripts\\python.exe -m pip install -r backend\\requirements.txt",
+    "dev": "concurrently -k -n frontend,backend -c cyan,green \"npm:dev:frontend\" \"npm:dev:backend\"",
+    "dev:frontend": "vite --host 127.0.0.1",
+    "dev:backend": "backend\\.venv\\Scripts\\python.exe backend/app.py",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.115.0",
+    "framer-motion": "^13.2.0",
+    "lucide-react": "^1.41.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "concurrently": "^10.0.5",
+    "oxlint": "^1.79.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2"
+  }
+}

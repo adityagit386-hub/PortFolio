@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-workspace",
+  "private": true,
+  "scripts": {
+    "setup:backend": "npm --prefix aditya-portfolio run setup:backend",
+    "dev": "npm --prefix aditya-portfolio run dev",
+    "build": "npm --prefix aditya-portfolio run build",
+    "lint": "npm --prefix aditya-portfolio run lint",
+    "preview": "npm --prefix aditya-portfolio run preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.115.0"
+  }
+}
